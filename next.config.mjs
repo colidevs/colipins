@@ -1,12 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    reactCompiler: true,
-  },
   logging: {
     fetches: {
       fullUrl: true,
     },
+  },
+  images: {
+    remotePatterns: [
+      {
+        hostname: "api.unsplash.com",
+      },
+      {
+        hostname: "unsplash.com",
+      },
+      {
+        hostname: "images.unsplash.com",
+      },
+    ],
   },
 };
 
