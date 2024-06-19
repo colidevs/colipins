@@ -1,5 +1,5 @@
-import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
 
 export default function HomePage() {
-  return <Button>🚀🚀🚀</Button>;
+  return <Input placeholder="Search" type="search" />;
 }
