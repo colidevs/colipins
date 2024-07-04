@@ -13,14 +13,13 @@ export default async function HomePage() {
       <h1>Home Page</h1>
       <Input placeholder="Search" type="search" />
 
-      <ul style={{listStyle: "none", padding: 0}}>
+      <ul>
         {photos.map((photo) => (
-          <li key={photo.id} style={{marginBottom: "20px"}}>
+          <li key={photo.id}>
             <Image
               alt={photo.alt_description!}
               height={photo.height}
               src={photo.urls.raw}
-              style={{width: "20%", height: "auto"}}
               width={photo.width}
             />
           </li>
