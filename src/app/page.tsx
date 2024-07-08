@@ -8,8 +8,6 @@ export default async function HomePage() {
   const photos = await api.photos.list();
 
   // RETURN => JSX, programacion declarativa, estructura de la pagina, vista, elementos visuales
-  // Muestra de cambios
-
   return (
     <>
       <h1>Home Page</h1>
@@ -17,13 +15,7 @@ export default async function HomePage() {
       <ul>
         {photos.map((photo) => (
           <li key={photo.id}>
-            <Image
-              alt={photo.alt_description!}
-              className="flex"
-              height={photo.height}
-              src={photo.urls.raw}
-              width={photo.width}
-            />
+            <Image alt={photo.alt_description!} height={500} src={photo.urls.raw} width={500} />
           </li>
         ))}
       </ul>
