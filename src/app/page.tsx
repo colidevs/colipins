@@ -12,10 +12,15 @@ export default async function HomePage() {
     <>
       <h1>Home Page</h1>
       <Input placeholder="Search" type="search" />
-      <ul>
+      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {photos.map((photo) => (
           <li key={photo.id}>
-            <Image alt={photo.alt_description!} height={500} src={photo.urls.raw} width={500} />
+            <Image
+              alt={photo.alt_description!}
+              height={photo.height}
+              src={photo.urls.raw}
+              width={photo.width}
+            />
           </li>
         ))}
       </ul>
